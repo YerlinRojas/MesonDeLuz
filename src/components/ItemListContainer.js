@@ -1,28 +1,52 @@
 import React, { useEffect, useState } from 'react'
-import Items from './Items'
+import data from '../data/MOCK_DATA.json'
+import ItemList from './ItemList'
+
+import { useParams } from 'react-router-dom'
+
+function ItemListContainer () {
 
 
-function ItemListContainer (props) {
+const [productos, setProductos] = useState([])
+
+const pedirproductos = () => {
+  return new Promise ((res) =>{
+    setTimeout (() => {
+       res (data)
+    }, 500)
+  }) 
+}
+
+const perdirProductoByCategory = (productCategory ) => {
+  return new Promise ((res) => {
+      setTimeout (() => {
+          res(data.filter(prod=> prod.category === productCategory))
+      },500)
+  })
+}
+
+const {categoryId} = useParams ()
+
+  useEffect (()=>{
+
+    const asyncFunc = categoryId ? perdirProductoByCategory : pedirproductos
+
+    asyncFunc (categoryId)
+    .then (res => {
+      setProductos(res)
+    })
+    .catch (error => {
+      console.error (error)
+    })
+    
+
+
+  },[categoryId])
 
   return (
-    <>
-    
-    <div id="Product1" class="card mb-3" style={{'max-width': '540px;'}}>
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="" class="img-fluid rounded-start" alt="..."></img>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{props.idMenu}</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    <Items/>
-  </div>
-</div>
-</div>
-    </>
+  
+  <ItemList productos ={productos}/>
+
   )
 }
 

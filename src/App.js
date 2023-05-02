@@ -1,18 +1,15 @@
 
-import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
-
-
+import {BrowserRouter} from 'react-router-dom';
+import Main from './components/Main';
 
 function App() {
   return (
-    <>
+<BrowserRouter>
+<NavBar/>
+<Main/>
 
- <NavBar/>
-<ItemListContainer idMenu= "MENU1"/>
-<ItemListContainer idMenu= "MENU2"/>
-<ItemListContainer idMenu= "MENU3"/>
-</>
+</BrowserRouter>
   );
 }
 
