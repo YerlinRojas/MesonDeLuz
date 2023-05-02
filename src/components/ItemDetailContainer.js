@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
     const perdirProductoById = (productId ) => {
         return new Promise ((res) => {
             setTimeout (() => {
-                res(data.find(prod=> prod.id === productId))
+                res(data.find(prod=> prod.id === parseInt(productId)))
             },500)
         })
     }

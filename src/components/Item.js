@@ -11,10 +11,10 @@ const Item = ({id, image, title, description, price, stock}) => {
                     >
                         <div class="row g-0">
                             <div class="col-md-4">
-                            <img   src={image}
+                           <Link to={`/item/${id}`}><img   src={image}
                                     class="img-fluid rounded-start"
                                     alt="..."
-                                ></img>
+                                ></img></Link> 
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -29,7 +29,7 @@ const Item = ({id, image, title, description, price, stock}) => {
                                 </div>
                                 <Counter stock= {stock}/> 
                                 <button type="button" class="btn btn-warning">Agregar</button>
-                                <Link to={`/item/${id}`}  > <button>ver mas</button>  </Link>
+                                 
                             </div>
                         </div>
                     </div> 
