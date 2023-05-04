@@ -3,11 +3,18 @@ import Counter from './Counter'
 import { Link } from 'react-router-dom'
 
 const Item = ({id, image, title, description, price, stock}) => {
-  return (
+  
+  
+    const onAdd = (quantity) => {
+        console.log(quantity)
+      }
+    
+  
+    return (
     <>
      <div   id={id}
                         class="card mb-3"
-                        style={{ "max-width": "540px;" }}
+                        width= "540px" 
                     >
                         <div class="row g-0">
                             <div class="col-md-4">
@@ -27,9 +34,8 @@ const Item = ({id, image, title, description, price, stock}) => {
                                     </p>
                                     <p>Stock:{stock}</p>
                                 </div>
-                                <Counter stock= {stock}/> 
-                                <button type="button" class="btn btn-warning">Agregar</button>
-                                 
+                                <Counter onAdd={onAdd} stock= {stock}/> 
+                                
                             </div>
                         </div>
                     </div> 

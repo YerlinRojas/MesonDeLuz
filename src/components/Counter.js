@@ -1,20 +1,32 @@
 import React from 'react'
-import useCounter from './useCounter'
+import { useState } from 'react'
 
 
 
-const Counter = ({stock}) => {
+const Counter = ({stock, onAdd, initial}) => {
 
+  const [quantity, setQuantity] = useState (1)
 
-    const resultado = useCounter ()
+      const handleDecrement = () =>{
+        if (quantity > 1)
+      setQuantity(quantity - 1)
+  } 
+
+    const handleIncrement = () => {
+      if (quantity < stock)
+          setQuantity(quantity + 1)
+      }
+  
     
     return (
     <>
      
-    <p>{resultado.quantity}</p>
-    <button  onClick = {resultado.handleDecrement} type="button" class="btn btn-warning">-</button>
-    <button disabled={resultado.quantity === stock} onClick = {resultado.handleIncrement} type="button" class="btn btn-warning">+</button>
     
+    <button  onClick = {handleDecrement} type="button" class="btn btn-warning">-</button>
+    <p>{quantity}</p>
+    <button  onClick = {handleIncrement} type="button" class="btn btn-warning">+</button>
+    <button onClick={()=> onAdd=(quantity)}  type="button" class="btn btn-warning">Add</button>
+
     </>
   )
 }
