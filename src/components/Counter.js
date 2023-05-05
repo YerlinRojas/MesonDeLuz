@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 
 
-const Counter = ({stock, onAdd, initial}) => {
+const Counter = ({stock, onAdd}) => {
 
   const [quantity, setQuantity] = useState (1)
 
@@ -25,7 +25,7 @@ const Counter = ({stock, onAdd, initial}) => {
     <button  onClick = {handleDecrement} type="button" class="btn btn-warning">-</button>
     <p>{quantity}</p>
     <button  onClick = {handleIncrement} type="button" class="btn btn-warning">+</button>
-    <button onClick={()=> onAdd=(quantity)}  type="button" class="btn btn-warning">Add</button>
+    <button onClick={()=> onAdd(quantity)}  type="button" class="btn btn-warning">Add</button>
 
     </>
   )

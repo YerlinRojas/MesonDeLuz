@@ -49,3 +49,10 @@ nav {
   border-radius: 25px;
 }
 
+.avisoCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}

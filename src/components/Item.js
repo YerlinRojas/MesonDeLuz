@@ -1,13 +1,9 @@
 import React from 'react'
-import Counter from './Counter'
 import { Link } from 'react-router-dom'
 
 const Item = ({id, image, title, description, price, stock}) => {
   
   
-    const onAdd = (quantity) => {
-        console.log(quantity)
-      }
     
   
     return (
@@ -26,16 +22,14 @@ const Item = ({id, image, title, description, price, stock}) => {
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">{title}</h5>
-                                    <p class="card-text">{description}</p>
                                     <p class="card-text">
                                         <small class="text-body-secondary">
-                                            {price}
+                                            Precio: ${price}
                                         </small>
                                     </p>
                                     <p>Stock:{stock}</p>
                                 </div>
-                                <Counter onAdd={onAdd} stock= {stock}/> 
-                                
+
                             </div>
                         </div>
                     </div> 
