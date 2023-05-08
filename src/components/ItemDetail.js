@@ -39,10 +39,13 @@ const { addItem } = useContext (CartContext)
       <di>
       {
         addQuantity > 0 ?
-        (<Link to= "/carrito" >Terminar Compra</Link>)
-        : (<Counter onAdd={onAdd} stock= {product.stock}/>)
+        ((<Link to= "/cart" ><button type="button" class="btn btn-warning">Terminar compra</button></Link>)
+         )
+        :
+        (<Counter onAdd={onAdd} stock= {product.stock}/>)
       }
-           
+  
+
       </di>
       </div>
   </div>

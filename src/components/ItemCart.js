@@ -3,9 +3,9 @@ import { CartContext } from './context/CartContext'
 
 
 
-const ItemCart = () => {
+const ItemCart = ({product}) => {
 
-    const {removeProduct} = useContext (CartContext)
+    const {removeItem} = useContext (CartContext)
 
   return (
     <>
@@ -19,8 +19,9 @@ const ItemCart = () => {
         <h5 class="card-title">{product.title}</h5>
         <p class="card-text"><small class="text-body-secondary">Cantidad : {product.quantity}</small></p>
         <p class="card-text"><small class="text-body-secondary">Precio: ${product.price} c/u</small></p>
-        <p class="card-text"><small class="text-body-secondary">SubTotal : ${product.price}</small></p>
-        <button onClick={()=>removeProduct(product.id)} type="button" class="btn btn-warning">Eliminar</button>
+        <p class="card-text"><small class="text-body-secondary">SubTotal : ${product.quantity*product.price}</small></p>
+        <button onClick={()=>removeItem(product.id)} type="button" class="btn btn-warning">Eliminar</button>
+        
       </div>
       </div>
   </div>
