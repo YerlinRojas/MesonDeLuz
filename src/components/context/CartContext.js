@@ -41,7 +41,7 @@ const totalPrice = () => {
 }
 
 const totalProducts = () => {
-  cart.reduce((acc,productAct) => acc+productAct.quantity, 0)
+  return cart.reduce((acc,productAct) => acc+productAct.quantity, 0)
 }
 
   return (

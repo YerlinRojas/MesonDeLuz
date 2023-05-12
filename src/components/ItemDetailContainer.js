@@ -1,32 +1,22 @@
 import React, { useState, useEffect } from 'react'
-import data from '../data/MOCK_DATA.json'
-import ItemDetail from './ItemDetail'
 
+import ItemDetail from './ItemDetail'
+import {  doc, getDoc } from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
+import { db } from './firebase/setting'
 
 const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState (null)
     
-    const perdirProductoById = (productId ) => {
-        return new Promise ((res) => {
-            setTimeout (() => {
-                res(data.find(prod=> prod.id === parseInt(productId)))
-            },500)
-        })
-    }
-    
     const {itemId} = useParams ()
     
 
     useEffect (()=>{
-        perdirProductoById(itemId)
-        .then(res=> {
-            setProduct(res)
-        })
-        .catch(error => {
-            console.error(error)
-        })
+        const queryDoc = doc(db, "ProductsColletion", itemId)
+        getDoc(queryDoc)
+        .then(res => setProduct({id: res.id, ...res.data()}))
+        .catch (error => console.log(error))
     },[itemId])
 
 

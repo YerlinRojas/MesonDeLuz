@@ -33,8 +33,8 @@ const { addItem } = useContext (CartContext)
       <div class="card-body">
         <h5 class="card-title">{product.title}</h5>
         <p class="card-text">{product.description}</p>
-        <p class="card-text"><small class="text-body-secondary">{product.price}</small></p>
-        <p>Stock:{product.stock}</p>
+        <p class="card-text"><small class="text-body-secondary">Precio: $ {product.price}</small></p>
+        <p class="card-text"><small class="text-body-secondary">Stock: $ {product.stock}</small></p>
       </div>
       <di>
       {
