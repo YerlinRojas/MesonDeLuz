@@ -48,3 +48,6 @@ After that it is ready to use!!!
 6. Type git clone, and then paste the URL you copied earlier.
 7. Press Enter to create your local clone.
 
+### Preview App
+
+![gif_rtsp]https://github.com/YerlinRojas/MesonDeLuz/blob/master/chrome_1LqUjfVQDp.gif

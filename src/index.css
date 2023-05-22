@@ -188,3 +188,11 @@ top: 38%;
   transform: scale(1.0);
   background-color: antiquewhite;
 }
+
+.totalCompra {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(223, 221, 221);
+  font-size: larger;
+  font-weight: 600;
+}
