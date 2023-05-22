@@ -5,6 +5,7 @@ import {  doc, getDoc } from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
 import { db } from './firebase/setting'
 
+
 const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState (null)
@@ -23,8 +24,12 @@ const ItemDetailContainer = () => {
 
     
     return (
-        <ItemDetail {...product} />
+      
+        <ItemDetail {...product}/>
+      
+
     )
+
 }
 
 export default ItemDetailContainer

@@ -8,7 +8,7 @@ import { db } from './firebase/setting'
 import { Container, Form, Button } from 'semantic-ui-react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-
+import Swal from 'sweetalert2'
 
 const Cart = () => {
 
@@ -43,15 +43,13 @@ onSubmit: (e) =>{
 setUsuario({...usuario,
     [e.target.name]:e.target.value
   })  
-  alert("gracias por tu compra") 
-   
-} 
 
-}) 
+}
 
+})
 
 
-  
+
 const order = {
   usuario : usuario,
   item : cart.map (product => ({id: product.id, title: product.title, price: product.price, quantity: product.quantity})),
@@ -61,21 +59,24 @@ const order = {
 const handleOrder = () => {
   const orderCollection = collection(db, "orders")
   addDoc(orderCollection, order)
-  .then (({ id }) => console.log(id))
+  .then (({ id }) => 
+ Swal
+  .fire(`Tu id de compra`,
+    ((id)),
+'success',
+    { 
+          confirmButtonText: "Inicio",
+          timer: 4500
+  })
+  .then(resultado => {
+      if (resultado.value) {
+        window.location.href = "./";
+      } 
+  }) 
 
-}
-
-
-if (cart.length === 0){
-
-  return (
-    <div class= "avisoCart">
-      <h2>Aun no has elegido nada para comprar</h2>
-    <Link to= "/" ><button type="button" class="btn btn-warning">Seguir Comprando</button></Link>
-    </div>
   )
-
 }
+
 
 return (
   <>
@@ -116,6 +117,8 @@ return (
 
     </>
   )
+
+  
 
 
 }

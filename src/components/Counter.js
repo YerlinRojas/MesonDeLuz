@@ -21,12 +21,12 @@ const Counter = ({stock, onAdd}) => {
     return (
     <>
      
-    
+    <div className='counter'> 
     <button  onClick = {handleDecrement} type="button" class="btn btn-warning">-</button>
     <p>{quantity}</p>
     <button  onClick = {handleIncrement} type="button" class="btn btn-warning">+</button>
     <button onClick={()=> onAdd(quantity)}  type="button" class="btn btn-warning">Add</button>
-
+</div>
     </>
   )
 }

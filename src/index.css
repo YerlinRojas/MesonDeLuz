@@ -12,18 +12,32 @@ code {
     monospace;
 }
 
-.barra{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
- 
+a{
+  color: black;
 }
 
-nav {
-  background-color: rgb(245, 245, 245);
-  border-radius: 25px;
+
+
+.navbar2 {
+  display: grid;
+  grid-template-columns: 90% auto;
+  grid-template-rows: auto;
+  align-content: center;
+  height: 60px;
 }
+
+.navbar1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+
+.nn{
+  font-weight:500;
+  text-decoration: none;
+}
+
 
 .carrito {
   display: flex;
@@ -32,22 +46,8 @@ nav {
   align-items: center;
 }
 
-.logoHome {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
-}
 
-.logo{
-  border-radius: 50px;
-}
 
-.nav-link:hover{
-  background-color: rgb(253, 211, 23);
-  border-radius: 25px;
-}
 
 .avisoCart {
   display: flex;
@@ -55,9 +55,6 @@ nav {
   justify-content: center;
   align-items: center;
   
-<<<<<<< Updated upstream
-}
-=======
 }
 
 .counter {
@@ -80,15 +77,114 @@ nav {
 
 }
 
-/* input:invalid {
-  border: 2px dashed red;
+.banner {
+  display: flex;
 }
 
-input:invalid:required {
-  background-image: linear-gradient(to right, pink, lightgreen);
+.banner-Z{
+  position: relative;
+  display: grid;
+grid-template-columns: auto auto;
+grid-template-rows: auto;
+  justify-content: center;
+  margin-top: 0px;
+  
 }
 
-input:valid {
-  border: 2px solid black;
-} */
->>>>>>> Stashed changes
+.bannerZ{
+position:absolute;  
+  height: 300px;
+  width: 300px;
+top: 38%;
+  left : 38%; 
+  box-shadow:  0px 10px 10px rgb(187, 187, 187);
+  box-sizing: content-box;
+  
+}
+
+
+.bannerImg {
+  height: 300px;
+  width: 3000px;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: oblique;
+ font-weight: lighter;
+  height: fit-content;
+  padding-left: 177%;
+  padding-top: 50%;
+}
+
+.reservation h1 {
+  font-size: large;
+  border-top: 1px solid ;
+  color: rgb(176, 176, 176);
+}
+
+
+.containerDetail{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  margin-top: 25px; 
+  gap: 25px;
+  
+}
+
+.containerProduct{
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-template-rows: auto ;
+  margin: 0 50px 0 50px;
+  background-color: rgb(238, 238, 238);
+ gap: 25px;
+ border-radius: 10px ;
+}
+
+.imagenDetail{
+  height: 500px;
+  width: 600px;
+ margin:20px;
+ border-radius: 10px;
+}
+
+.containerInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: content-box;
+}
+
+.containerDescription{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 50px 0 50px;
+  height: 300px;
+}
+
+.itemList{
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  margin-top: 25px;
+
+}
+
+.cardStyle{
+  margin: 15px;
+  box-shadow:  0px 10px 10px rgb(187, 187, 187);
+  transition: all 3000ms;
+  position: relative;
+}
+
+.cardStyle:hover{
+  transform: scale(1.0);
+  background-color: antiquewhite;
+}

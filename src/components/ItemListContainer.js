@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
-
 import ItemList from './ItemList'
 import { collection,getDocs, query, where } from 'firebase/firestore'
-
 import { useParams } from 'react-router-dom'
 import { db } from './firebase/setting'
+
+
+
+
 
 function ItemListContainer () {
 
@@ -33,10 +35,14 @@ const {categoryId} = useParams ()
 
   },[categoryId])
 
-  return (
-  
-  <ItemList productos ={productos}/>
+  return ( 
+    <>
+    
 
+<ItemList productos ={productos}/> 
+   
+  
+</>
   )
 }
 
