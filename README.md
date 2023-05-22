@@ -50,4 +50,4 @@ After that it is ready to use!!!
 
 ### Preview App
 
-![gif_rtsp]https://github.com/YerlinRojas/MesonDeLuz/blob/master/chrome_1LqUjfVQDp.gif
+![gif_rtsp](https://github.com/YerlinRojas/MesonDeLuz/blob/master/chrome_1LqUjfVQDp.gif)
