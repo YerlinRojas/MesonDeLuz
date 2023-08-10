@@ -6,19 +6,19 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.4",
-    "firebase": "^9.21.0",
-    "formik": "^2.2.9",
-    "framer-motion": "10.12.12",
+    "firebase": "^9.23.0",
+    "formik": "^2.4.2",
+    "framer-motion": "^10.12.12",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.2",
+    "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.14.2",
+    "react-scripts": "^5.0.1",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
-    "sweetalert2": "^11.7.5",
+    "sweetalert2": "^11.7.20",
     "web-vitals": "^2.1.4",
     "yup": "^1.1.1"
   },
@@ -45,5 +45,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was created with:\r ### `ReactJS`\r Robust JavaScript library used in the development of dynamic web applications. Makes JavaScript coding easier, improves your app's performance and SEO, and more\r ______________________\r ### `Bootstrap`\r Framework for developing responsive and mobile-first websites.\r _________________________\r ### `Framer-Motion`\r Framer Motion is a simple yet powerful motion library for React. \r ________________\r ### `Firebase` \r Database",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
