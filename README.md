@@ -1,52 +1,52 @@
-# E-commerce Restaurant Meson de Luz
+# E-commerce Restaurante El Mesón de Luz 🍝🥧🍽️
 
+Este proyecto es un e-commerce desarrollado para un restaurante llamado El Mesón de Luz. Permite a los usuarios explorar el menú, realizar pedidos en línea y gestionar su experiencia de compra de manera eficiente.
 
-## Technologies
-This project was created with:
-### `ReactJS`
-Robust JavaScript library used in the development of dynamic web applications. Makes JavaScript coding easier, improves your app's performance and SEO, and more
-______________________
-### `Bootstrap`
-Framework for developing responsive and mobile-first websites.
-_________________________
-### `Framer-Motion`
-Framer Motion is a simple yet powerful motion library for React. 
-________________
-### `Firebase` 
-Database
+## Tecnologias utilizadas
 
-_________________
-### `Sweetalert2`
-Alerts
-__________________________
-### `Semantic`
-### `Formik`
-### `Yup`
-Controlled forms
+Este proyecto fue creado utilizando las siguientes tecnologías:
 
-## How to use it
-First create a copy of the repository.
-Then run the code in a code editor.
-After that it is ready to use!!!
+- **ReactJS:** Biblioteca de JavaScript robusta utilizada en el desarrollo de aplicaciones web dinámicas. Facilita la codificación en JavaScript, mejora el rendimiento y SEO de tu aplicación, entre otros beneficios.
 
-### Cloning a repository
-1. On GitHub.com, navigate to the main page of the repository.
+- **Bootstrap:** Framework para desarrollar sitios web responsivos y móviles de manera eficiente.
 
-2. Above the list of files, click <> Code.
-3. Copy the URL for the repository.
+- **Framer-Motion:** Biblioteca de animaciones para React que permite crear efectos de movimiento dinámicos y atractivos.
 
-- To clone the repository using HTTPS, under "HTTPS", click .
+- **Firebase:** Base de datos utilizada para almacenar y gestionar la información de los pedidos, usuarios y otros datos relevantes.
 
-- To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click .
+- **Sweetalert2:** Librería para mostrar alertas y mensajes de manera elegante y personalizable.
 
-- To clone a repository using GitHub CLI, click GitHub CLI, then click .
+- **Semantic UI:** Framework que proporciona estilos predefinidos y componentes semánticos para construir interfaces de usuario de forma rápida y sencilla.
 
-4. Open TerminalTerminalGit Bash.
+- **Formik:** Librería para crear y gestionar formularios en React de manera sencilla y eficiente.
 
-5. Change the current working directory to the location where you want the cloned directory.
+- **Yup:** Herramienta para validar esquemas de datos en JavaScript, utilizada en combinación con Formik para validar formularios de manera robusta.
 
-6. Type git clone, and then paste the URL you copied earlier.
-7. Press Enter to create your local clone.
+## Instalación y Uso
+
+```bash
+# Clona este repositorio en tu máquina local
+git clone https://github.com/tu-usuario/e-commerce-meson-de-luz
+
+# Ingresa al directorio del proyecto
+cd e-commerce-meson-de-luz
+
+# Instala las dependencias del proyecto
+npm install
+
+# Configura tu base de datos Firebase:
+# - Crea un nuevo proyecto en Firebase.
+# - Configura las reglas de seguridad y obtén las credenciales de acceso.
+
+# Configura las variables de entorno en un archivo .env
+touch .env
+
+# Agrega las variables de entorno necesarias al archivo .env
+
+# Inicia el servidor de desarrollo
+npm start
+
+# Abre tu navegador y visita http://localhost:3000 para acceder al e-commerce Mesón de Luz
 
 ### Preview App
 
