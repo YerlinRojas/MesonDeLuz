@@ -39,7 +39,7 @@ npm install
 # - Configura las reglas de seguridad y obtén las credenciales de acceso.
 
 # Configura las variables de entorno en un archivo .env
-touch .env
+ .env
 
 # Agrega las variables de entorno necesarias al archivo .env
 
