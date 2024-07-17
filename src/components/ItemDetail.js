@@ -46,10 +46,6 @@ const { addItem } = useContext (CartContext)
         </div>
       </div>
 
-      <div className='containerDescription'>
-      <h2>Descripción :</h2> 
-      <p>{product.description2} </p>
-      </div>
       
       </div>
       
